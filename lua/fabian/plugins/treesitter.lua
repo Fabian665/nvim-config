@@ -1,8 +1,8 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    branch = 'main',
+    "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     lazy = false,
-    build = ':TSUpdate',
+    build = ":TSUpdate",
     init = function()
         local parser_installed = {
             "python",
@@ -16,7 +16,9 @@ return {
             "bash",
         }
 
-        vim.defer_fn(function() require("nvim-treesitter").install(parser_installed) end, 1000)
+        vim.defer_fn(function()
+            require("nvim-treesitter").install(parser_installed)
+        end, 1000)
         require("nvim-treesitter").update()
 
         -- auto-start highlights & indentation
@@ -33,5 +35,5 @@ return {
                 end
             end,
         })
-    end
+    end,
 }
