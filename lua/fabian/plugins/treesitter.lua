@@ -4,23 +4,6 @@ return {
     lazy = false,
     build = ":TSUpdate",
     init = function()
-        local parser_installed = {
-            "python",
-            "lua",
-            "vim",
-            "vimdoc",
-            "markdown_inline",
-            "markdown",
-            "toml",
-            "yaml",
-            "bash",
-        }
-
-        vim.defer_fn(function()
-            require("nvim-treesitter").install(parser_installed)
-        end, 1000)
-        require("nvim-treesitter").update()
-
         -- auto-start highlights & indentation
         vim.api.nvim_create_autocmd("FileType", {
             desc = "User: enable treesitter highlighting",
@@ -43,10 +26,28 @@ return {
                         url = "https://github.com/cathaysia/tree-sitter-asciidoc",
                         revision = "0ecc13042b7352ddc3f7b8b31432e262711d44e4",
                         location = "tree-sitter-asciidoc",
+                        queries = "tree-sitter-asciidoc/queries"
                     },
                 }
             end,
         })
-        vim.treesitter.language.register("asciidoc", { "adoc" })
+
+        local parser_installed = {
+            "python",
+            "lua",
+            "vim",
+            "vimdoc",
+            "markdown_inline",
+            "markdown",
+            "toml",
+            "yaml",
+            "bash",
+            "asciidoc",
+        }
+
+        vim.defer_fn(function()
+            require("nvim-treesitter").install(parser_installed)
+        end, 1000)
+        require("nvim-treesitter").update()
     end,
 }
