@@ -35,5 +35,17 @@ return {
                 end
             end,
         })
+        vim.api.nvim_create_autocmd("User", {
+            pattern = "TSUpdate",
+            callback = function()
+                require("nvim-treesitter.parsers").asciidoc = {
+                    install_info = {
+                        url = "https://github.com/cathaysia/tree-sitter-asciidoc",
+                        revision = "0ecc13042b7352ddc3f7b8b31432e262711d44e4",
+                        location = "tree-sitter-asciidoc",
+                    },
+                }
+            end,
+        })
     end,
 }
