@@ -47,5 +47,6 @@ return {
                 }
             end,
         })
+        vim.treesitter.language.register("asciidoc", { "adoc" })
     end,
 }
