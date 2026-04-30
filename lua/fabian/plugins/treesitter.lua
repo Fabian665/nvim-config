@@ -18,6 +18,14 @@ return {
                 end
             end,
         })
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = { "python", "bash" },
+            callback = function()
+                vim.treesitter.start()
+                vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+                vim.wo[0][0].foldmethod = "expr"
+            end,
+        })
         vim.api.nvim_create_autocmd("User", {
             pattern = "TSUpdate",
             callback = function()
@@ -26,7 +34,7 @@ return {
                         url = "https://github.com/cathaysia/tree-sitter-asciidoc",
                         revision = "0ecc13042b7352ddc3f7b8b31432e262711d44e4",
                         location = "tree-sitter-asciidoc",
-                        queries = "tree-sitter-asciidoc/queries"
+                        queries = "tree-sitter-asciidoc/queries",
                     },
                 }
             end,
@@ -43,6 +51,8 @@ return {
             "yaml",
             "bash",
             "asciidoc",
+            "just",
+            "go",
         }
 
         vim.defer_fn(function()

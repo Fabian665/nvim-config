@@ -10,6 +10,7 @@ return {
             "bashls",
             "jsonls",
             "tombi",
+            "gopls",
         },
         automatic_enable = {
             exclude = {
