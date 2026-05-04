@@ -3,15 +3,18 @@
 ## Prerequisites
 
 - [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
-- a C compiler in your path and libstdc++ installed ([Windows users please read this!](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)).
-
-## Notes
-
-This uses [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter)'s depracated master branch and should be updated.
+- [fd](https://github.com/sharkdp/fd#installation)
+- [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
+- A C compiler in your path and libstdc++ installed ([Windows users please read this!](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)).
+- For LSP support, install the used LSPs mentioned in [lsp](lsp/)
+- More(?)
 
 ## Install
 
 ### Windows
+
+> [!NOTE]
+> Not yet tested on Windows
 
 #### Powershell
 
