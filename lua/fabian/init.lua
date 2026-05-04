@@ -1,4 +1,4 @@
 require("fabian.set")
 require("fabian.remap")
 require("fabian.lazy")
-require("fabian.custom")
+vim.treesitter.language.register("asciidoc", { "adoc" })
