@@ -4,3 +4,10 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
     vim.bo.filetype = "caddy"
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "python",
+    callback = function ()
+        vim.opt_local.iskeyword:remove("_")
+    end,
+})
