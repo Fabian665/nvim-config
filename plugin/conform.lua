@@ -3,18 +3,20 @@ vim.pack.add({ { src = "https://github.com/stevearc/conform.nvim", name = "confo
 local conform = require("conform")
 conform.setup({
   formatters_by_ft = {
-    lua = { "stylua" },
-    python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
     go = { "gofmt" },
-    sh = { "shfmt" },
+    json = { "jq" },
+    lua = { "stylua" },
     markdown = { "rumdl" },
+    python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+    sh = { "shfmt" },
   },
   formatters = {
     shfmt = {
-      append_args = { "--indent", "2" },
+      append_args = { "--indent", "2" }, -- Indent argument seems to be added by conform might be redundant here
     },
     stylua = {
-      append_args = { "--indent-type", "Spaces", "--indent-width", "2" },
+      append_args = { "--indent-type", "Spaces", "--indent-width", "2" }, -- Conform does not add those.
+      -- should probably switch to context aware. See https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/shfmt.lua
     },
   },
 })
