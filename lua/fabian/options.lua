@@ -17,3 +17,6 @@ vim.opt.foldlevelstart = 4
 
 vim.opt.signcolumn = "yes:1"
 vim.opt.ff = "unix"
+
+vim.opt.undodir = vim.fn.stdpath("state") .. "/undodir"
+vim.opt.undofile = true
