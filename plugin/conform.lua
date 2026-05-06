@@ -9,6 +9,8 @@ conform.setup({
     markdown = { "rumdl" },
     python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
     sh = { "shfmt" },
+    toml = { "tombi" },
+    yaml = { "yamlfmt" },
   },
   formatters = {
     shfmt = {

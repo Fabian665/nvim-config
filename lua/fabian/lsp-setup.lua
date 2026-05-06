@@ -49,7 +49,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-vim.lsp.enable("ruff")
-vim.lsp.enable("pyright")
-vim.lsp.enable("lua_ls")
+vim.lsp.enable("bashls")
 vim.lsp.enable("gopls")
+vim.lsp.enable("harper-ls")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("pyright")
+vim.lsp.enable("ruff")
+vim.lsp.enable("rumdl")
+vim.lsp.enable("tombi")
+vim.lsp.enable("yamlls")

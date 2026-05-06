@@ -8,7 +8,8 @@ The main goal is to have a (relatively) minimal setup, but with coding QoL tools
 - [fd](https://github.com/sharkdp/fd#installation)
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
 - A C compiler in your path and libstdc++ installed
-- For LSP and formatters support, install the used LSPs mentioned in the [`lsp` directory](lsp/) and the formatters mentioned in [Conform's config](plugin/conform.lua)
+- For LSP and formatters support, install the used LSPs mentioned in the
+[`lsp` directory](lsp/) and the formatters mentioned in [Conform's config](plugin/conform.lua)
   - [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
     - [harper-ls](https://rumdl.dev/getting-started/installation/#__tabbed_1_2) (Other means of installing exist)
     - [rumdl](https://rumdl.dev/getting-started/installation/#__tabbed_1_2) (Other means of installing exist)
@@ -16,6 +17,8 @@ The main goal is to have a (relatively) minimal setup, but with coding QoL tools
   - [go](https://go.dev/doc/install)
     - gofmt (Installed with `go`)
     - [gopls](https://go.dev/gopls/#installation)
+    - [yamlfmt](https://github.com/google/yamlfmt#installation)
+    - [yamlls](https://github.com/redhat-developer/yaml-language-server)
   - [lua-ls](https://luals.github.io/#neovim-install) (I dislike the available package managers)
   - [shfmt](https://webinstall.dev/shfmt/)
   - [npm and node](https://nodejs.org/en/download)
