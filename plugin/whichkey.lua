@@ -1,7 +1,7 @@
 vim.pack.add({
-  { src = "https://github.com/folke/which-key.nvim" },
-  { src = "https://github.com/nvim-tree/nvim-web-devicons" },
   { src = "https://github.com/nvim-mini/mini.icons" },
+  { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+  { src = "https://github.com/folke/which-key.nvim" },
 })
 
 local ok, wk = pcall(require, "which-key")
