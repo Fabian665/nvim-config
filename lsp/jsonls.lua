@@ -39,3 +39,4 @@ return {
   },
   root_markers = { ".git" },
 }
+-- See https://nix-community.github.io/nixvim/plugins/lsp/servers/jsonls/index.html#pluginslspserversjsonlsenable to enable completions
