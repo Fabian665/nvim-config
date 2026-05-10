@@ -9,3 +9,5 @@ require("fidget").setup({
     override_vim_notify = true,
   },
 })
+
+require("todo-comments").setup({})
