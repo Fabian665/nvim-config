@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "<F4>", vim.lsp.buf.code_action, "Code action")
 
     if client.name == "ruff" then
-      -- Disable hover in favour of Pyright
+      -- Disable hover in favor of BasedPyright
       client.server_capabilities.hoverProvider = false
     end
 
@@ -54,7 +54,7 @@ vim.lsp.enable("gopls")
 vim.lsp.enable("harper-ls")
 vim.lsp.enable("jsonls")
 vim.lsp.enable("lua_ls")
-vim.lsp.enable("pyright")
+vim.lsp.enable("basedpyright")
 vim.lsp.enable("ruff")
 vim.lsp.enable("rumdl")
 vim.lsp.enable("tombi")
